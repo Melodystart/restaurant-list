@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- link css files here -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+<header>
+  <!-- link css files here -->
+  <link rel="stylesheet" href="/stylesheets/show.css">
+  <!-- navigation -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+          width="30" height="30" class="d-inline-block align-top" alt="好。吃">
+        <strong>{{#if isAuthenticated}}{{user.name}}'s{{/if}}餐廳清單</strong>
+      </a>
+      <div class="navbar-brand">
+        <a href="/restaurants/new" class="navbar-brand"><strong>新增餐廳</strong></a>
+        {{#if isAuthenticated}}
+        <a href="/users/logout" class="btn btn-outline-light navbar-brand"><strong>Logout</strong></a>
+        {{else}}
+        <a href="/users/login" class="btn btn-outline-light navbar-brand"><strong>Login</strong></a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner"></div>
+</header>
+
+<body>
+  <!-- partial templates will replace the part of "body" here -->
+  {{{body}}}
+  <!-- include javascript files here -->
+  <script src="/javascripts/popper.min.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <script src="/javascripts/popper.js"></script>
+  <script src="https://kit.fontawesome.com/37fb3b3f95.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

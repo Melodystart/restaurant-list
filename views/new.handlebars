@@ -1,0 +1,66 @@
+<div class="container m-3">
+  <h3>新增餐廳</h3>
+
+  <form action="/restaurants" method="POST">
+
+    <div class="my-3">
+      <label for="name">中文店名</label>
+      <input type="text" placeholder="梅子鰻蒲燒專賣店" name="name" id="name" class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="name_en">英文店名</label>
+      <input type="text" placeholder="plum eel" name="name_en" id="name_en" class="form-control">
+    </div>
+
+    <div class="my-3">
+      <label for="category">餐廳類型</label>
+      <input type="text" placeholder="日本料理" name="category" id="category" list="categoryOption" class="form-control"
+        required>
+      <datalist id="categoryOption">
+        <option>美式</option>
+        <option>咖啡</option>
+        <option>中東料理</option>
+        <option>日本料理</option>
+        <option>義式餐廳</option>
+      </datalist>
+    </div>
+
+    <div class="my-3">
+      <label for="image">圖片網址</label>
+      <input type="text" placeholder="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5628/02.jpg"
+        name="image" id="image" class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="location">餐廳地址</label>
+      <input type="text" placeholder="台北市中山區林森北路 107 巷 8 號" name="location" id="location" class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="phone">餐廳電話</label>
+      <input type="text" placeholder="02 2521 2813" name="phone" id="phone" class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="google_map">google地圖</label>
+      <input type="text" placeholder="https://goo.gl/maps/cUJEmFSRKyH2" name="google_map" id="google_map"
+        class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="rating">google評分</label>
+      <input type="text" placeholder="4.3" name="rating" id="rating" class="form-control" required>
+    </div>
+
+    <div class="my-3">
+      <label for="description">餐廳簡介</label>
+      <textarea rows="3" type="text" name="description" id="description" class="form-control" required>
+      </textarea>
+
+      <button type="submit" class="btn btn-primary my-3">新增餐廳</button>
+      <button type="reset" class="btn btn-outline-danger">重新輸入</button>
+    </div>
+  </form>
+
+</div>
